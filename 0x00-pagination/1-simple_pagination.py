@@ -45,5 +45,5 @@ class Server:
         #      final_data.append(data_list[index])
         if start_index > len(self.dataset()):
             return []
-        end_index = min(end_index, len(data_list))
+        end_index = min(end_index, len(self.dataset()))
         return self.dataset()[start_index:end_index]
