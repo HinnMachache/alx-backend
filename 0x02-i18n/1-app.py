@@ -9,6 +9,7 @@ from flask_babel import Babel
 app = Flask(__name__)
 babel = Babel(app)
 
+
 class Config:
     """
     Config class containing default locale, languages and UTC
@@ -18,7 +19,8 @@ class Config:
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
-app.config.from_objects(Config)
+app.config.from_object(Config)
+
 
 @app.route('/', strict_slashes=False)
 def home():
